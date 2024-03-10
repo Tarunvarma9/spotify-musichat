@@ -9,6 +9,7 @@ import Library from "../library";
 import Player from "../player";
 import Trending from "../trending";
 import "./home.css";
+import Logout from "../auth/logout";
 
 export default function Home() {
   const [token, setToken] = useState("");
@@ -40,6 +41,7 @@ export default function Home() {
           {/* <Route path="/trending" element={<Trending />} /> */}
           <Route path="/player" element={<Player />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path='/logout' element={<Logout/>}/>
         </Routes>
       </div>
     </Router>

@@ -20,13 +20,17 @@ export default function Player() {
         .then((res) => {
           setTracks(res.data.items);
           setCurrentTrack(res.data?.items[0]?.track);
-        });
+        }).catch((error)=>{
+          localStorage.removeItem("token");
+          window.location.reload();
+        })
     }
   }, [location.state]);
 
   useEffect(() => {
     setCurrentTrack(tracks[currentIndex]?.track);
   }, [currentIndex, tracks]);
+
 
   return (
     <div className="screen-container flex">
