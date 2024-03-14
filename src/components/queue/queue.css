@@ -8,10 +8,11 @@
 }
 
 .queue {
-  height: 85%;
   flex-direction: column;
+  height: 85%;
   justify-content: space-between;
   width: 80%;
+  margin-left: 40px;
 }
 
 .upNext {
