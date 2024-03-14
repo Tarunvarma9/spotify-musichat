@@ -19,9 +19,9 @@ export default function AlbumInfo({ album }) {
           ", "
         )} with ${album?.total_tracks} track(s)`}</p>
       </div>
-      <div className="album-release">
+      {/* <div className="album-release">
         <p>Release Date: {album?.release_date}</p>
-      </div>
+      </div> */}
     </div>
   );
 }
