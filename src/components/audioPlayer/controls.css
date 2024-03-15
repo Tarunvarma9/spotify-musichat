@@ -31,7 +31,7 @@
   box-shadow: inset -4px -4px 10px #55291e, inset 4px 4px 10px 1px #ffae9a;
 } */
 
-.play-pause-btn {
+/* .play-pause-btn {
   align-items: center;
   background-color: #50a4c9;
   border-radius: 30px;
@@ -41,10 +41,21 @@
   justify-content: center;
   transition: all .2s ease-in-out;
   width: 70px;
+} */
+
+.play-pause-btn {
+  align-items: center;
+  background-color: #1c4587;
+  border-radius: 50px;
+  cursor: pointer;
+  height: 70px;
+  justify-content: center;
+  transition: all .2s ease-in-out;
+  width: 70px;
 }
 
 .play-pause-btn.active {
-  box-shadow: inset -4px -4px 10px #364562, inset 4px 4px 10px 1px #364562;
+  /* box-shadow: inset -4px -4px 10px #364562, inset 4px 4px 10px 1px #364562; */
 }
 
 .play-pause-btn:hover {
