@@ -11,6 +11,7 @@ const Library = () => {
 
   useEffect(() => {
     APIKit.get("me/playlists").then(function (response) {
+      console.log(response.data.items)
       setPlaylists(response.data.items);
     }).catch((error)=>{
       localStorage.removeItem("token");
@@ -22,6 +23,7 @@ const Library = () => {
 
  
   const playPlaylist = (id) => {
+    console.log(id)
     navigate("/player", { state: { id: id } });
   };
 
