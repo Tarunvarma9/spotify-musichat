@@ -19,7 +19,7 @@ export default function Player() {
   return (
     <div className="screen-container flex">
       {location.state.id ?(
-            <iframe
+          <iframe
             title="Spotify Embed"
             src={`https://open.spotify.com/embed/playlist/${location.state.id}?utm_source=generator&theme=1`}
             width="100%"
@@ -29,7 +29,6 @@ export default function Player() {
             loading="lazy"
           />
       ):(<>{handleError}
-      
       </>)
     }
     </div>
