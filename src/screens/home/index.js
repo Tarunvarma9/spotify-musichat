@@ -11,6 +11,7 @@ import Trending from "../trending";
 import "./home.css";
 import Logout from "../auth/logout";
 
+
 export default function Home() {
   const [token, setToken] = useState("");
 

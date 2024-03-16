@@ -7,8 +7,10 @@ import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
 import apiClient from "../../spotify";
+import { useLocation } from "react-router-dom";
 
 export default function Sidebar() {
+  const location = useLocation();
   const [image, setImage] = useState(
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdLAY3C19kL0nV2bI_plU3_YFCtra0dpsYkg&usqp=CAU"
   );
@@ -17,13 +19,19 @@ export default function Sidebar() {
       setImage(response.data.images[0].url);
     });
   }, []);
+
+  // Check if location.state exists and has id property
+  const hasSelectedPlaylist = location.state && location.state.id;
+
   return (
     <div className="sidebar-container">
       <img src={image} className="profile-img" alt="profile" />
       <div>
         {/* <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} /> */}
         {/* <SidebarButton title="Trending" to="/trending" icon={<FaGripfire />} /> */}
-        <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
+        {hasSelectedPlaylist && (
+          <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
+        )}
         {/* <SidebarButton
           title="Favorites"
           to="/favorites"
@@ -31,7 +39,7 @@ export default function Sidebar() {
         /> */}
         <SidebarButton title="Library" to="/" icon={<IoLibrary />} />
       </div>
-      <SidebarButton title="Sign Out" to="/logout"  icon={<FaSignOutAlt />} />
+      <SidebarButton title="Sign Out" to="/logout" icon={<FaSignOutAlt />} />
     </div>
   );
 }
