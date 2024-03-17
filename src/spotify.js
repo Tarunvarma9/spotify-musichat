@@ -3,7 +3,7 @@ import axios from "axios";
 const authEndpoint = "https://accounts.spotify.com/authorize?";
 const clientId = "d0d5588442744bbcaa15ab667d42feff";
 // const redirectUri = "https://tspotify4musichat.vercel.app";
-const redirectUri = "https://spotify-musichat.vercel.app";
+const redirectUri = "https://tspotify4hat.vercel.app";
 // const redirectUri = "http://localhost:3000";
 const scopes = ["user-library-read", "playlist-read-private"];
 
