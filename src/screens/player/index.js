@@ -24,7 +24,7 @@ export default function Player() {
             src={`https://open.spotify.com/embed/playlist/${location.state.id}?utm_source=generator&theme=1`}
             width="100%"
             height="100%"
-            style={{ minHeight: '360px' }}
+            style={{ minHeight: '360px', border:0 }}
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           />
